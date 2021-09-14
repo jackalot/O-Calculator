@@ -1,12 +1,30 @@
-function add (a, b) {
+ add = (a, b) => {
     return a + b;
 }
-function subtract (c, d) {
+ subtract = (c, d) => {
     return c - d;
 }
-function multiply (e, f) {
+ multiply = (e, f) => {
     return e * f;
 }
-function divide (g, h) {
+ divide = (g, h) => {
     return g / h;
+}
+
+function Operate (num1, operation, num2) {
+    switch(operation)
+    {
+        case "+":
+            add(num1, num2);
+        break;
+        case  "-":
+            subtract(num1, num2);
+        break;
+        case "*":
+            multiply(num1, num2);
+        break;
+        case "/":
+            divide(num1, num2);
+        break;
+    }
 }
