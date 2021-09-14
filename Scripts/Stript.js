@@ -52,7 +52,15 @@ function Operator (operator) {
             if(equation[i] === "+" || equation[i] === "-" || equation[i] === "*" || equation[i] === "/")
             {
                 console.log("found operand" + equation[i]);
+                seperateEquation(equation, i);
+                break;
             }
         }
     }
+}
+function seperateEquation (equation, operatorIndex) {
+let slice1 = equation.slice(0, operatorIndex);
+console.log(slice1);
+let slice2 = equation.slice(operatorIndex + 1, equation.length);
+console.log(slice2)
 }
