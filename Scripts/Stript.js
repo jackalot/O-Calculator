@@ -10,7 +10,7 @@
  divide = (g, h) => {
     let answer =  g / h;
 }
-
+const display = document.querySelector("#display");
 function operate (num1, operation, num2) {
     switch(operation)
     {
@@ -27,4 +27,12 @@ function operate (num1, operation, num2) {
             divide(num1, num2);
         break;
     }
+}
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", changeDisplay(button.id));
+})
+function changeDisplay (id) {
+     display.textContent = id;
+    console.log(id);
 }
