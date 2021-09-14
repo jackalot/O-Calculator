@@ -17,10 +17,19 @@
     operatorCount = 0;
 }
  divide = (g, h) => {
-    let answer =  g / h;
-    display.value = answer;
-    equation = display.value;
-    operatorCount = 0
+     if(g === 0 && h === 0)
+     {
+        display.value = "theres nothing to divide, what are you doing?";
+        equation = display.value;
+        operatorCount = 0
+     }
+     else
+     {
+        let answer =  g / h;
+        display.value = answer;
+        equation = display.value;
+        operatorCount = 0
+     }
 }
 const display = document.querySelector("#display");
 function operate (num1, operation, num2) {
