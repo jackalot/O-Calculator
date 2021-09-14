@@ -1,8 +1,17 @@
  add = (a, b) => {
-    let sum = a + b;
-    display.value = sum;
-    equation = display.value;
-    operatorCount = 0;
+     if(a === 9 && b === 10)
+     {
+        display.value = "its a 109. nah its 21, ok its 19";
+        equation = display.value;
+        operatorCount = 0;
+     }
+     else
+     {
+        let sum = a + b;
+        display.value = sum;
+        equation = display.value;
+        operatorCount = 0;
+     }
 }
  subtract = (c, d) => {
     let remaining =  c - d;
@@ -20,7 +29,7 @@
      if(g === 0 && h === 0)
      {
         display.value = "theres nothing to divide, what are you doing?";
-        equation = display.value;
+        equation = "";
         operatorCount = 0
      }
      else
