@@ -30,7 +30,9 @@ function operate (num1, operation, num2) {
 }
 function changeDisplay (value) {
      display.value += value;
-    console.log(value);
+    equation = display.value;
+   // console.log(value);
+   // console.log(equation);
 }
 let equation = ""; //stores the entire equation
 let operatorCount = 0;
@@ -38,8 +40,6 @@ let operatorCount = 0;
 function Operator (operator) {
     if(operatorCount === 0)
     {
-        equation = display.value; 
-        equation += operator;
         changeDisplay(operator);
         operatorCount++;
 
@@ -66,10 +66,11 @@ function Clear()
     operatorCount = 0;
 }
 function seperateEquation (equation, operatorIndex) {
+    console.log(equation);
     let slice1 = equation.slice(0, operatorIndex);
     let num1 = parseFloat(slice1);
     let slice2 = equation.slice(operatorIndex + 1, equation.length);
     let num2 = parseFloat(slice2);
-    console.log("num1: " + num1 + " num2: " + num2);
-    console.log("operator index is " + operatorIndex)
+    let ourOperation = equation.slice(operatorIndex, operatorIndex + 1);
+    console.log(ourOperation)
 }
