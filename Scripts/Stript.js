@@ -1,18 +1,26 @@
  add = (a, b) => {
     let sum = a + b;
-    changeDisplay("=" + sum);
+    display.value = sum;
+    equation = display.value;
+    operatorCount = 0;
 }
  subtract = (c, d) => {
     let remaining =  c - d;
-    changeDisplay("=" + remaining);
+    display.value = remaining;
+    equation = display.value;
+    operatorCount = 0;
 }
  multiply = (e, f) => {
     let answer = e * f;
-    changeDisplay("=" + answer);
+    display.value = answer;
+    equation = display.value;
+    operatorCount = 0;
 }
  divide = (g, h) => {
     let answer =  g / h;
-    changeDisplay("=" + answer);
+    display.value = answer;
+    equation = display.value;
+    operatorCount = 0
 }
 const display = document.querySelector("#display");
 function operate (num1, operation, num2) {
