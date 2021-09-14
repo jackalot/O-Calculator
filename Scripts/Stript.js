@@ -60,7 +60,8 @@ function Operator (operator) {
 }
 function seperateEquation (equation, operatorIndex) {
 let slice1 = equation.slice(0, operatorIndex);
-console.log(slice1);
-let slice2 = equation.slice(operatorIndex + 1, equation.length);
-console.log(slice2)
+let num1 = parseFloat(slice1);
+let slice2 = equation.slice(operatorIndex + 1, equation.length + 1);
+let num2 = parseFloat(slice2);
+console.log("num1 " + num1 + " num2 " + num2);
 }
