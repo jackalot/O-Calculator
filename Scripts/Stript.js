@@ -1,17 +1,17 @@
  add = (a, b) => {
-    return a + b;
+    let sum = a + b;
 }
  subtract = (c, d) => {
-    return c - d;
+    let remaining =  c - d;
 }
  multiply = (e, f) => {
-    return e * f;
+    let answer = e * f;
 }
  divide = (g, h) => {
-    return g / h;
+    let answer =  g / h;
 }
 
-function Operate (num1, operation, num2) {
+function operate (num1, operation, num2) {
     switch(operation)
     {
         case "+":
