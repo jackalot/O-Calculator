@@ -28,7 +28,31 @@ function operate (num1, operation, num2) {
         break;
     }
 }
-function changeDisplay (id) {
-     display.value += id;
-    console.log(id);
+function changeDisplay (value) {
+     display.value += value;
+    console.log(value);
+}
+let equation = ""; //stores the entire equation
+let operatorCount = 0;
+//adds an operator ie + - / *
+function Operator (operator) {
+    if(operatorCount === 0)
+    {
+        equation = display.value; 
+        equation += operator;
+        changeDisplay(operator);
+        operatorCount++;
+
+    }
+    else
+    {
+        //find the equations operator since its count is 1
+        for(i = 0; i < equation.length; i++)
+        {
+            if(equation[i] === "+" || equation[i] === "-" || equation[i] === "*" || equation[i] === "/")
+            {
+                console.log("found operand" + equation[i]);
+            }
+        }
+    }
 }
