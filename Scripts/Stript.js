@@ -63,11 +63,12 @@ function Clear()
 {
     equation = "";
     display.value = "";
+    operatorCount = 0;
 }
 function seperateEquation (equation, operatorIndex) {
     let slice1 = equation.slice(0, operatorIndex);
     let num1 = parseFloat(slice1);
     let slice2 = equation.slice(operatorIndex + 1, equation.length + 1);
     let num2 = parseFloat(slice2);
-    console.log("num1 " + num1 + " num2 " + num2);
+    console.log("num1: " + num1 + " num2: " + num2);
 }
