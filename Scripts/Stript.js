@@ -1,14 +1,18 @@
  add = (a, b) => {
     let sum = a + b;
+    changeDisplay("=" + sum);
 }
  subtract = (c, d) => {
     let remaining =  c - d;
+    changeDisplay("=" + remaining);
 }
  multiply = (e, f) => {
     let answer = e * f;
+    changeDisplay("=" + answer);
 }
  divide = (g, h) => {
     let answer =  g / h;
+    changeDisplay("=" + answer);
 }
 const display = document.querySelector("#display");
 function operate (num1, operation, num2) {
@@ -46,16 +50,7 @@ function Operator (operator) {
     }
     else
     {
-        //find the equations operator since its count is 1
-        for(i = 0; i < equation.length; i++)
-        {
-            if(equation[i] === "+" || equation[i] === "-" || equation[i] === "*" || equation[i] === "/")
-            {
-                console.log("found operand" + equation[i]);
-                seperateEquation(equation, i);
-                break;
-            }
-        }
+       pressedEnter();
     }
 }
 
@@ -72,5 +67,19 @@ function seperateEquation (equation, operatorIndex) {
     let slice2 = equation.slice(operatorIndex + 1, equation.length);
     let num2 = parseFloat(slice2);
     let ourOperation = equation.slice(operatorIndex, operatorIndex + 1);
-    console.log(ourOperation)
+    console.log(ourOperation);
+    operate(num1, ourOperation, num2);
+}
+function pressedEnter()
+{
+     //find the equations operator since its count is 1
+     for(i = 0; i < equation.length; i++)
+     {
+         if(equation[i] === "+" || equation[i] === "-" || equation[i] === "*" || equation[i] === "/")
+         {
+             console.log("found operand" + equation[i]);
+             seperateEquation(equation, i);
+             break;
+         }
+     }
 }
