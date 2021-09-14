@@ -28,11 +28,7 @@ function operate (num1, operation, num2) {
         break;
     }
 }
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button) => {
-    button.addEventListener("click", changeDisplay(button.id));
-})
 function changeDisplay (id) {
-     display.textContent = id;
+     display.value += id;
     console.log(id);
 }
